@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Class</title>
+  </head>
+  <body>
+    <!-- form is a block element -->
+    <form>
+      <!-- type text allows you to type in a box -->
+      <!-- input is an inline element -->
+      <input
+        id="title"
+        name="title"
+        type="text"
+        placeholder="Enter a title..."
+        required
+      />
+      <input type="number" min="4" max="200" step="4" />
+      <!-- date type will allow you to choose from a calendar -->
+      <input type="date" />
+      <!-- this will check for the @ sign -->
+      * <input type="email" placeholder="Enter Your Email..." />
+      <!-- button is an inline element -->
+      <!-- both ways of creating a button below are acceptable -->
+      <br />
+      <button type="submit">Create Post</button>
+      <br />
+      <input type="submit" value="Input Submit" />
+    </form>
+    <!-- these are all block elements -->
+    <div>Hello Div</div>
+    <div>Still a block element</div>
+    <nav></nav>
+    <article><p>My paragraph is inside an article here</p></article>
+    <!-- labels -->
+    <form>
+      <!-- for and id link the label and input tags -->
+      <label for="post-title">Blog post title</label>
+      <input id="post-title" name="post-title" type="text" />
+      <!-- this is the nested input -->
+      <br />
+      <label for="subject">
+        Subject:
+        <input
+          placeholder="Subject..."
+          id="subject"
+          name="subject"
+          type="text"
+        />
+      </label>
+      <br />
+      <!-- radio buttons -->
+      <label>
+        Public
+        <input
+          id="public"
+          name="visibility"
+          type="radio"
+          value="public"
+          checked
+        />
+      </label>
+
+      <label>
+        Private
+        <input id="private" name="visibility" type="radio" value="private" />
+      </label>
+      <br />
+      <label>
+        Pin post?
+        <input id="pin-post" name="pin" type="checkbox" value="pin" checked />
+      </label>
+      <br />
+      <!-- dropdown menu -->
+      <label>
+        Post category
+        <!-- having a value that is an empty string and using the required keyword will require user to choose from the dropdown -->
+        <select id="post-category" name="category" required>
+          <option value="">-- Select a category --</option>
+          <option value="personal">Personal</option>
+          <option value="professional">Professional</option>
+          <option value="promotion">Promotion</option>
+        </select>
+      </label>
+      <button type="submit">New Choices</button>
+    </form>
+    <!-- this is valid HTML BUT we read left to right so it is not intuitive -->
+    <form>
+      <label>
+        <input id="preferred" name="first" type="text" />
+        Preferred Name
+      </label>
+
+      <label>
+        <input id="surname" name="last" type="text" />
+        Surname
+      </label>
+    </form>
+    <!-- radio buttons connect by adding name -->
+    <!-- using checked attribute chooses input by default -->
+    <form>
+      <label>
+        <input type="radio" name="prefix" />
+        Mr.
+      </label>
+      <label>
+        <input type="radio" name="prefix" />
+        Mrs.
+      </label>
+
+      <label>
+        <input type="radio" name="prefix" />
+        Mx.
+      </label>
+      <br />
+      <!-- checkbox creation -->
+      <label for="terms">
+        <input id="terms" name="terms" type="checkbox" />
+        I Agree To These Terms
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
